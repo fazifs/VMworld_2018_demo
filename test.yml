@@ -19,8 +19,7 @@
       assert:
         that:
           - "datacenter_result.changed"
-          
-    
+
     - name: Create a cluster "{{ cluster }}"
       vmware_cluster:
         validate_certs: no
