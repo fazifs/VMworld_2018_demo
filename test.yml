@@ -13,12 +13,8 @@
         password: "{{ vcenter_pass }}"
         datacenter_name: "{{ datacenter }}"
         state: present
-      register: datacenter_result
 
-    - name: Check if datacenter "{{ datacenter }}" is created
-      assert:
-        that:
-          - "datacenter_result.changed"
+
 
     - name: Create a cluster "{{ cluster }}"
       vmware_cluster:
@@ -32,9 +28,4 @@
         enable_drs: yes
         enable_vsan: no
         state: present
-      register: cluster_result
-
-    - name: Check if cluster is created
-      assert:
-        that:
-          - "cluster_result.changed"
+ 
