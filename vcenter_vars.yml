@@ -1,9 +1,9 @@
 ---
 # Global Settings
-- vcenter_server: 10.65.22.1
-- vcenter_user: administrator@vsphere.local
-- vcenter_pass: Esxi@123$%
-- datacenter: Asia-Datacenter1
+- vcenter_server: vcenter.example.com
+- vcenter_user: root
+- vcenter_pass: 
+- datacenter: 
 - cluster: Asia-Cluster1
 
 # ESXi settings
