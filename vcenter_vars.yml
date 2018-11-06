@@ -2,21 +2,21 @@
 # Global Settings
 - vcenter_server: vcenter.example.com
 - vcenter_user: root
-- vcenter_pass: 
-- datacenter: 
-- cluster: Asia-Cluster1
+- vcenter_pass: r3dh4t1!
+- datacenter: BCN-Demo
+- cluster: BCN-Cluster1
 
 # ESXi settings
-- esxi_hostname: 10.76.33.6
+- esxi_hostname: esx1.example.com
 - esxi_username: root
-- esxi_password: esxi123
+- esxi_password: r3dh4t1!
 
 # VM settings
 - vm_name: VM_168
-- template_name: ubuntu_t
-- datastore: ds_226_3
+- template_name: RHEL 7
+- datastore: Datastore
 - network: VM Network
-- folder: /Asia-Datacenter1/vm/
+- folder: /BCN-Demo/vm/
 - dns_server: 8.8.8.8
 
 # Snapshot settings
