@@ -28,4 +28,18 @@
         enable_drs: yes
         enable_vsan: no
         state: present
+
+    - name: Add existing ESXi "{{ esxi_hostname }}"
+      vmware_host:
+        validate_certs: no
+        hostname: "{{ vcenter_server }}"
+        username: "{{ vcenter_user }}"
+        password: "{{ vcenter_pass }}"
+        datacenter_name: "{{ datacenter }}"
+        cluster_name: "{{ cluster }}"
+        esxi_hostname: "{{ esxi_hostname }}"
+        esxi_username: "{{ esxi_username }}"
+        esxi_password: "{{ esxi_password }}"
+        state: present
+      register: host_result
  
