@@ -1,0 +1,21 @@
+---
+- name: VMware Object Creation
+  hosts: localhost
+  gather_facts: False
+  vars_files:
+    - vcenter_vars.yml
+  tasks:
+    - name: Create a datacenter "{{ datacenter }}"
+      vmware_datacenter:
+        validate_certs: no
+        hostname: "{{ vcenter_server }}"
+        username: "{{ vcenter_user }}"
+        password: "{{ vcenter_pass }}"
+        datacenter_name: "{{ datacenter }}"
+        state: present
+      register: datacenter_result
+
+    - name: Check if datacenter "{{ datacenter }}" is created
+      assert:
+        that:
+          - "datacenter_result.changed"
