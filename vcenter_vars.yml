@@ -7,7 +7,7 @@
 - cluster: BCN-Cluster1
 
 # ESXi settings
-- esxi_hostname: esx1.example.com
+- esxi_hostname: 129.213.194.200
 - esxi_username: root
 - esxi_password: r3dh4t1!
 
