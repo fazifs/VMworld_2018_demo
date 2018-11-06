@@ -19,3 +19,23 @@
       assert:
         that:
           - "datacenter_result.changed"
+          
+    
+    - name: Create a cluster "{{ cluster }}"
+      vmware_cluster:
+        validate_certs: no
+        hostname: "{{ vcenter_server }}"
+        username: "{{ vcenter_user }}"
+        password: "{{ vcenter_pass }}"
+        datacenter_name: "{{ datacenter }}"
+        cluster_name: "{{ cluster }}"
+        enable_ha: no
+        enable_drs: yes
+        enable_vsan: no
+        state: present
+      register: cluster_result
+
+    - name: Check if cluster is created
+      assert:
+        that:
+          - "cluster_result.changed"
