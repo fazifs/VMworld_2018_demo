@@ -7,7 +7,7 @@
 - cluster: BCN-Cluster1
 
 # ESXi settings
-- esxi_hostname: vsphere1.localdomain
+- esxi_hostname: 192.168.0.51
 - esxi_username: root
 - esxi_password: r3dh4t1!
 
