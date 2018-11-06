@@ -3,8 +3,8 @@
 - vcenter_server: vcenter.example.com
 - vcenter_user: root
 - vcenter_pass: r3dh4t1!
-- datacenter: BCN-Demo
-- cluster: BCN-Cluster1
+- datacenter: DC01
+- cluster: Cluster01
 
 # ESXi settings
 - esxi_hostname: 192.168.0.51
