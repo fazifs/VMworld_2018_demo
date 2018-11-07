@@ -13,6 +13,7 @@
         username: "{{ vcenter_user }}"
         password: "{{ vcenter_pass }}"
         validate_certs: no 
+        folder: "{{ folder }}"
         datacenter: "{{ datacenter }}"
         networks:
           - name: "{{ network }}"
@@ -37,6 +38,7 @@
         username: "{{ vcenter_user }}"
         password: "{{ vcenter_pass }}"
         validate_certs: False
+        folder: "{{ folder }}"
         datacenter: "{{ datacenter }}"
         snapshot_name: "{{ snapshot }}"
       register: snapshot_result
