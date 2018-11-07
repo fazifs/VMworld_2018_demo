@@ -15,6 +15,7 @@
 - vm_name: VM_168
 - template_name: RHEL 7
 - datastore: Datastore
+- folder: /
 - network: VM Network
 - dns_server: 8.8.8.8
 
