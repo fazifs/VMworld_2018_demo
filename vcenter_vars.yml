@@ -2,14 +2,14 @@
 # Global Settings
 - vcenter_server: vcenter.example.com
 - vcenter_user: root
-- vcenter_pass: r3dh4t1!
+- vcenter_pass: 
 - datacenter: DC01
 - cluster: Cluster01
 
 # ESXi settings
 - esxi_hostname: 192.168.0.51
 - esxi_username: root
-- esxi_password: r3dh4t1!
+- esxi_password: !
 
 # VM settings
 - vm_name: VM_168
