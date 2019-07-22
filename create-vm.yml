@@ -4,8 +4,6 @@
   gather_facts: False
   vars:
     prefix: newvm
-    count: 1
-    padding: 3
     vmware_template: RHEL_7
 
   tasks:
@@ -16,8 +14,6 @@
         username: "{{ lookup('env', 'VMWARE_USER') }}"
         password: "{{ lookup('env', 'VMWARE_PASSWORD') }}"
         name: "{{ prefix }}"
-        exact_count: "{{ count }}"
-        exact_count_padding: "{{ padding }}"
         wait_for_ip_address: yes
         template: "{{ vmware_template }}"
         folder: "{{ folder }}"
