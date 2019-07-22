@@ -20,7 +20,7 @@
         datacenter: "{{ datacenter }}"
       
         disk:
-            - size_gb: 10
+            - size_gb: 20
               type: thin
               datastore: "{{ datastore }}"
     
