@@ -5,6 +5,7 @@
   vars:
     prefix: newvm
     vmware_template: RHEL_7
+    disk_size: 20
 
   tasks:
     - name: create the instance
@@ -18,10 +19,10 @@
         template: "{{ vmware_template }}"
         folder: "{{ folder }}"
         datacenter: "{{ datacenter }}"
-        autoselect_datastore: yes
+        
       
         disk:
-            - size_gb: 20
+            - size_gb: "{{ disk_size }}"
               type: thin
               datastore: "{{ datastore }}"
     
