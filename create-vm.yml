@@ -26,7 +26,4 @@
             - size_gb: 10
               type: thin
               datastore: "{{ datastore }}"
-        nic:
-            - type: vmxnet3
-              network: VM Network
-              network_type: standard
+    
