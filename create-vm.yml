@@ -18,6 +18,7 @@
         template: "{{ vmware_template }}"
         folder: "{{ folder }}"
         datacenter: "{{ datacenter }}"
+        autoselect_datastore: yes
       
         disk:
             - size_gb: 20
