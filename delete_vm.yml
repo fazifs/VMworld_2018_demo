@@ -1,0 +1,12 @@
+- hosts: localhost 
+  connection: local
+  gather_facts: False
+ 
+
+  tasks:
+    - name: create the instance
+      vmware_guest:
+        validate_certs: no
+        name: "{{ prefix }}"
+        state: absent
+        
