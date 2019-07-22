@@ -7,7 +7,7 @@
   tasks:
 
     - name: create the instance
-      vsphere_guest:
+      vmware_guest:
         validate_certs: no
         vcenter_hostname: "{{ lookup('env', 'VMWARE_HOST') }}"
         guest: "{{ guest_name }}"
@@ -20,7 +20,7 @@
          # hostname: 172.16.66.128
 
     - name: loop until the guest has an IP address
-      vsphere_guest:
+      vmware_guest:
         validate_certs: no
         vcenter_hostname: "{{ lookup('env', 'VMWARE_HOST') }}"
         #username: "{{ lookup('env', 'VMWARE_USER') }}"
