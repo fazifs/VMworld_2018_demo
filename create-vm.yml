@@ -2,10 +2,7 @@
 - hosts: localhost 
   connection: local
   gather_facts: False
-  vars:
-    prefix: newvm
-    vmware_template: RHEL_7
-    disk_size: 20
+ 
 
   tasks:
     - name: create the instance
